@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>MaciejkaAuth - Wyszukiwanie gracza</title>
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        body {
+            background: black;
+            color: white;
+            font-family: 'Fira Code', monospace;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 1.8rem;
+        }
+
+        form input {
+            font-size: 0.8rem;
+            padding: 0.5em 1em;
+            border-radius: 0.5rem;
+            color: white;
+            border: none;
+            outline: none;
+            font-family: 'Fira Code', monospace;
+            transition: all 0.3s;
+        }
+
+        form input[type=text] {
+            background: rgb(31, 31, 31);
+        }
+
+        form input[type=text]:focus {
+            transform: scale(1.05);
+        }
+
+        form input[type=submit] {
+            margin-top: 0.5rem;
+            background: rgb(187, 57, 238);
+            cursor: pointer;
+        }
+
+        form input[type=submit]:hover {
+            background: rgb(156, 48, 199);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Szukaj gracza</h1>
+        <form action="player.php" method="get">
+            <input type="text" placeholder="Nazwa gracza" name="name"><br>
+            <input type="submit" value="Szukaj">
+        </form>
+    </div>
+</body>
+</html>
