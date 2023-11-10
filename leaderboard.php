@@ -72,7 +72,7 @@
 <body>
     <span class="designerTag">Designed by Maciejka / Powered by MCJK-Stats</span>
     <div class="container">
-        <h1>Ranking graczy</h1>
+        <h1>Ranking graczy (Top 10)</h1>
         <select id="sorting">
             <option value="kills_desc">Kille malejąco</option>
             <option value="kills_asc">Kille rosnąco</option>
