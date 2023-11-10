@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include("mysql-lib.php");
 
     if (isset($_GET["name"])) {
@@ -27,74 +26,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>MaciejkaAuth - Wyszukiwanie gracza</title>
-    <style>
-        :root {
-            font-size: 20px;
-
-            --theme-color: rgb(187, 57, 238);
-        }
-
-        body {
-            background: black;
-            color: white;
-            font-family: 'Fira Code', monospace;
-        }
-
-        h1,h2,h3,h4,h5,h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .container {
-            display: flex;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            flex-direction: column;
-        }
-
-        .labelAbove {
-            opacity: 0.3;
-            margin-bottom: 0;
-        }
-
-        .playerName {
-            margin-top: 0;
-            color: var(--theme-color);
-        }
-
-        .markedText {
-            color: var(--theme-color);
-        }
-
-        button {
-            font-size: 0.8rem;
-            padding: 0.5em 1em;
-            border-radius: 0.5rem;
-            color: white;
-            border: none;
-            outline: none;
-            font-family: 'Fira Code', monospace;
-            transition: all 0.3s;
-            margin-top: 0.5rem;
-            background: var(--theme-color);
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: rgb(156, 48, 199);
-        }
-    </style>
 </head>
 <body>
+    <span class="designerTag">Designed by Maciejka / Powered by MCJK-Stats</span>
     <div class="container">
-        <h3 class="labelAbove">Wyszukiwanie gracza:</h3>
-        <h1 class="playerName">MaciejkaG</h1>
+        <h3 class="labelAbove">Statystyki gracza:</h3>
+        <h1 class="playerName"><?php if ($playerSQL) {echo $playerSQL["display_name"];} else {echo $_GET["name"];} ?></h1>
         <?php
             if ($playerSQL) {
                 echo '
