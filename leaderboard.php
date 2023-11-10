@@ -97,7 +97,7 @@
                 <th>CG</th>
             </tr>
             <?php
-            $sql = "SELECT * FROM player_stats $order";
+            $sql = "SELECT * FROM player_stats $order LIMIT 10";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
