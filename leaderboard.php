@@ -51,7 +51,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>MaciejkaAuth - Wyszukiwanie gracza</title>
+    <title>MaciejkaStats - Ranking graczy</title>
     <style>
         .container {
             box-sizing: border-box;
