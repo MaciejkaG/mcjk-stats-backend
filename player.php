@@ -43,7 +43,7 @@
                     Postawione bloki: <span class="markedText">'.$playerSQL["blocks_placed"].'</span><br>
                     Zniszczone bloki: <span class="markedText">'.$playerSQL["blocks_broken"].'</span><br>
                     Miejsce w rankingu (wg. killi): <span class="markedText">null</span><br>
-                    Czas gry (H:M): <span class="markedText">'.gmdate("H:i", $playerSQL["time_played"]).'</span>
+                    Czas gry (H:M): <span class="markedText">'.gmdate("H:i", $playerSQL["time_played"]*60).'</span>
                 </p>
                 ';
             } else {

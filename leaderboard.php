@@ -109,7 +109,7 @@
                         <td>'.$row["mob_kills"].'</td>
                         <td>'.$row["blocks_placed"].'</td>
                         <td>'.$row["blocks_broken"].'</td>
-                        <td>'.gmdate("H:i", $row["time_played"]).'</td>
+                        <td>'.gmdate("H:i", $row["time_played"]*60).'</td>
                     </tr>
                     ';
                 }
